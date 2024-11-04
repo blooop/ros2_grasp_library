@@ -1,1 +1,0 @@
-../../grasp_tutorials/doc/fixed_position_pick.rst

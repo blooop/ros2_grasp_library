@@ -1,1 +1,0 @@
-../../grasp_tutorials/doc/draw_x.rst

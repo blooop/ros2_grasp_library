@@ -33,6 +33,7 @@ set (WITH_OPENCL OFF)
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
@@ -59,7 +60,7 @@ set(SOURCES_POSEESTIMATION
  	)
 
 add_executable(pose_estimation ${SOURCES_POSEESTIMATION})
-ament_target_dependencies(pose_estimation rclcpp tf2 tf2_msgs tf2_ros std_msgs sensor_msgs cv_bridge image_transport)
+ament_target_dependencies(pose_estimation rclcpp tf2 tf2_msgs tf2_ros std_msgs sensor_msgs cv_bridge image_transport geometry_msgs builtin_interfaces)
 target_link_libraries(pose_estimation
   ${rclcpp_LIBRARIES}
   ${OpenCV_LIBS}
